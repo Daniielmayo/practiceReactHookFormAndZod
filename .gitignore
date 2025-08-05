@@ -1,0 +1,35 @@
+# Dependencias
+node_modules/
+
+# Archivos de entorno
+.env
+
+# Archivos de configuración local
+*.local
+
+# Archivos de compilación de TypeScript
+dist/
+*.js
+*.js.map
+
+# Archivos de registro y base de datos
+*.log
+*.sqlite
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de IDE y editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos de pruebas y cobertura
+coverage/
+*.lcov
+
+# Archivos de dependencias
+package-lock.json
+yarn.lock
