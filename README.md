@@ -52,6 +52,6 @@ npm start
 ```
 
 ### 📘 Acceso a la documentación de Swagger
-Una vez que el servidor esté en ejecución, puedes acceder a la documentación de Swagger para ver y probar los endpoints de la API. Abre tu navegador y navega a:
+Una vez que el servidor esté en ejecución, puedes acceder a la documentación de Swagger para ver y probar los endpoints de la API. Abre tu navegador y navega a la siguiente URL en caso de no ser el mismo local host cambiar al que se esta empleando:
 
 http://localhost:3000/api-docs
