@@ -15,7 +15,7 @@ export const createHotel = async (req: Request, res: Response) => {
             description,
             pricePerNight,
         } = req.body;
-
+        console.log(req.body);
         // Validación básica opcional (aunque ya la maneja mongoose)
         if (
             !name || !city || !rating || !amenities ||

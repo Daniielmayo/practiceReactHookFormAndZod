@@ -18,7 +18,10 @@ interface IHotel extends Document {
 
 const HotelSchema: Schema = new Schema({
     name: { type: String, required: true, minlength: 3 },
-    city: { type: Schema.Types.ObjectId, ref: 'City', required: true },
+    city: {
+        id: { type: String, required: true },
+        name: { type: String, required: true }
+    },
     rating: { type: Number, required: true, min: 1, max: 5 },
     hasWifi: { type: Boolean, default: false },
     amenities: { type: [String], required: true },

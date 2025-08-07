@@ -1,6 +1,6 @@
 /**
  * @swagger
- * /hotels:
+ * /api/hotels:
  *   post:
  *     summary: Crear un nuevo hotel
  *     tags: [Hoteles]
@@ -31,7 +31,7 @@
  *       500:
  *         description: Error del servidor
  *
- * /hotels/{id}:
+ * /api/hotels/{id}:
  *   get:
  *     summary: Obtener un hotel por ID
  *     tags: [Hoteles]
