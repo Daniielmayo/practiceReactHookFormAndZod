@@ -1,8 +1,14 @@
 import mongoose, { Document, Schema } from 'mongoose';
 
+
+interface ICity {
+    id: string;
+    name: string;
+}
+
 interface IHotel extends Document {
     name: string;
-    location: string;
+    city: ICity;
     rating: number;
     hasWifi: boolean;
     amenities: string[];
@@ -12,7 +18,7 @@ interface IHotel extends Document {
 
 const HotelSchema: Schema = new Schema({
     name: { type: String, required: true, minlength: 3 },
-    location: { type: String, required: true },
+    city: { type: Schema.Types.ObjectId, ref: 'City', required: true },
     rating: { type: Number, required: true, min: 1, max: 5 },
     hasWifi: { type: Boolean, default: false },
     amenities: { type: [String], required: true },

@@ -8,7 +8,7 @@ export const createHotel = async (req: Request, res: Response) => {
     try {
         const {
             name,
-            location,
+            city,
             rating,
             hasWifi,
             amenities,
@@ -18,7 +18,7 @@ export const createHotel = async (req: Request, res: Response) => {
 
         // Validación básica opcional (aunque ya la maneja mongoose)
         if (
-            !name || !location || !rating || !amenities ||
+            !name || !city || !rating || !amenities ||
             !description || pricePerNight === undefined
         ) {
             return res.status(400).json({ message: 'Faltan campos requeridos' });
@@ -26,7 +26,7 @@ export const createHotel = async (req: Request, res: Response) => {
 
         const hotel = new Hotel({
             name,
-            location,
+            city,
             rating,
             hasWifi: hasWifi ?? false,
             amenities,

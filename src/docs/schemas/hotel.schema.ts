@@ -6,7 +6,7 @@
  *       type: object
  *       required:
  *         - name
- *         - location
+ *         - city
  *         - rating
  *         - amenities
  *         - description
@@ -15,9 +15,18 @@
  *         name:
  *           type: string
  *           example: Hotel Sunrise
- *         location:
- *           type: string
- *           example: Bogotá, Colombia
+ *         city:
+ *           type: object
+ *           required:
+ *             - id
+ *             - name
+ *           properties:
+ *             id:
+ *               type: string
+ *               example: "11001"
+ *             name:
+ *               type: string
+ *               example: Bogotá
  *         rating:
  *           type: integer
  *           minimum: 1
